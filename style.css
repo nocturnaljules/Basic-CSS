@@ -13,27 +13,22 @@ h1{
   font-weight: 800;
 }
 
-/* Section headers like Paragraphs and Lists */
+/* Section headers */
 h2{
   font-size: 32px;
   margin: 30px 0 10px;
   font-weight: 800;
 }
 
-/* Default paragraph style */
+/* Default paragraph */
 p{
   font-size: 14px;
   line-height: 1.35;
   margin: 10px 0;
 }
 
-/* Target ONLY the five paragraphs immediately after the "Paragraphs" h2 */
-h2 + p{
-  /* paragraph 1 stays normal */
-}
-
-/* Paragraph 2 boxed */
-h2 + p + p{
+/* SECOND PARAGRAPH BOX */
+p:nth-of-type(2){
   width: 78%;
   margin: 18px auto;
   padding: 18px 16px;
@@ -42,21 +37,16 @@ h2 + p + p{
   line-height: 1.8;
 }
 
-/* Paragraph 3 stays normal */
-h2 + p + p + p{
-  /* normal */
-}
-
-/* Paragraph 4 dark blue */
-h2 + p + p + p + p{
+/* FOURTH PARAGRAPH DARK BLUE */
+p:nth-of-type(4){
   background: #001a7a;
   color: #fff;
   padding: 12px 14px;
   border: 3px solid #00124d;
 }
 
-/* Paragraph 5 dark blue */
-h2 + p + p + p + p + p{
+/* FIFTH PARAGRAPH DARK BLUE */
+p:nth-of-type(5){
   background: #001a7a;
   color: #fff;
   padding: 12px 14px;
@@ -72,7 +62,7 @@ a:visited{
   color: #551a8b;
 }
 
-/* w3schools link is different color */
+/* w3schools link */
 a[href*="w3schools"]{
   color: #b00000;
 }
@@ -81,14 +71,14 @@ a[href*="w3schools"]:visited{
   color: #7a0000;
 }
 
-/* Ordered list with two digits 01 02 03 */
+/* Ordered list */
 ol{
   list-style-type: decimal-leading-zero;
   padding-left: 30px;
   margin-top: 10px;
 }
 
-/* Table styling */
+/* Table */
 table{
   width: 520px;
   border-collapse: collapse;
