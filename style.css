@@ -5,12 +5,6 @@ body{
   color: #000;
 }
 
-/* Main page wrapper if your HTML has one, otherwise this does nothing */
-main, .container, #container{
-  width: 96%;
-  margin: 0 auto;
-}
-
 /* Big centered title */
 h1{
   text-align: center;
@@ -33,28 +27,36 @@ p{
   margin: 10px 0;
 }
 
-/* The 2nd paragraph boxed with green border
-   This targets the second paragraph inside the Paragraphs section.
-   If it does not hit, use the alternate selector notes below.
-*/
-#paragraphs p:nth-of-type(2),
-section p:nth-of-type(2),
-main p:nth-of-type(2){
+/* Target ONLY the five paragraphs immediately after the "Paragraphs" h2 */
+h2 + p{
+  /* paragraph 1 stays normal */
+}
+
+/* Paragraph 2 boxed */
+h2 + p + p{
   width: 78%;
   margin: 18px auto;
   padding: 18px 16px;
   border: 3px solid #0a6a0a;
-  background: #fff;
+  background: #ffffff;
   line-height: 1.8;
 }
 
-/* The 4th and 5th paragraphs dark blue blocks */
-#paragraphs p:nth-of-type(4),
-#paragraphs p:nth-of-type(5),
-section p:nth-of-type(4),
-section p:nth-of-type(5),
-main p:nth-of-type(4),
-main p:nth-of-type(5){
+/* Paragraph 3 stays normal */
+h2 + p + p + p{
+  /* normal */
+}
+
+/* Paragraph 4 dark blue */
+h2 + p + p + p + p{
+  background: #001a7a;
+  color: #fff;
+  padding: 12px 14px;
+  border: 3px solid #00124d;
+}
+
+/* Paragraph 5 dark blue */
+h2 + p + p + p + p + p{
   background: #001a7a;
   color: #fff;
   padding: 12px 14px;
